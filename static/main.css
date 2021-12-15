@@ -1,0 +1,14 @@
+div.centered {
+    position: fixed;
+    width: 120%;
+    height: 1300%;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin-left: 260px;
+  }
+
+  div.middle
+{
+  text-align: center;
+}
