@@ -12,6 +12,19 @@ import numpy as np
 
 app = Flask(__name__)
 
+@app.route('/')
+def index():
+    """ Video streaming home page """
+    return render_template('index.html')
+
+
+@app.route('/video')
+def video():
+    return Response(gen(), mimetype='multipart/x-mixed-replace; boundary=frame')
+
+
+
+
 # load our serialized face detector model from disk
 prototxtPath = r"face_detector\deploy.prototxt"
 weightsPath = r"face_detector\res10_300x300_ssd_iter_140000.caffemodel"
@@ -91,17 +104,6 @@ def gen():
         yield (b'--frame\r\n'
                b'Content-Type: image/jpeg\r\n\r\n' + open('t.jpg', 'rb').read() + b'\r\n')
 
-
-@app.route('/')
-def index():
-    """ Video streaming home page """
-    return render_template('index.html')
-
-
-@app.route('/video')
-def video():
-    return Response(gen(), mimetype='multipart/x-mixed-replace; boundary=frame')
-
-
 if __name__ == '__main__':
     app.run(debug=True)
+
