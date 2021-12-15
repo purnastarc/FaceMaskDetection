@@ -2,7 +2,7 @@ from tensorflow.keras.applications.mobilenet_v2 import preprocess_input
 from tensorflow.keras.preprocessing.image import img_to_array
 from tensorflow.keras.models import load_model
 from flask import Flask, render_template, Response
-from imutils.video import FileVideoStream
+from imutils.video import VideoStream
 from imutils.video import FPS
 import imutils
 import time
@@ -66,7 +66,7 @@ def detect_and_predict_mask(frame, faceNet, maskNet):
 
 
 def gen():
-    vs = FileVideoStream("video3.mp4").start()
+    vs = VideoStream(src=0).start()
     time.sleep(2.0)
     while True:
         frame = vs.read()
