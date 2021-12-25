@@ -1,4 +1,5 @@
 Face Mask Detection Model - Detection of face masks in  real-time video streams :
+
 Created a convolutional neural network model with MobileNetV2 architecture in place of the convolutional layer.
 The data set used for training the model contains a mixture of “ With Mask” and “With Out Mask” images.
 The model achieved an accuracy of 97%.
