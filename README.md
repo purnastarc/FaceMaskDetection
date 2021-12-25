@@ -1,4 +1,11 @@
-Created a Facemask mask detection model which can detect face mask in real-time video streams. The model is built using convolutional neural network with MobileNetV2 architecture in place of convolutional layer.
-The model is trained on the data set obtained from kaggle which is having Mask and WithOut Mask Images.
-The trained model is then integrated with Flask web frame work.
-The trained model is then used to classify the face region in each frame of the video captured from webcam. The predcition label is then written back to each video frame in real time.
+Face Mask Detection Model - Detection of face masks in  real-time video streams :
+Created a convolutional neural network model with MobileNetV2 architecture in place of the convolutional layer.
+The data set used for training the model contains a mixture of “ With Mask” and “With Out Mask” images.
+The model achieved an accuracy of 97%.
+For real-world usage, the OpenCV library is used to get the region of interest of the face in each frame of the video stream and is inputted into the model.
+The trained model then predicts “Mask” or “No-Mask” on the faces in each frame.
+The model was provided to the end-users as a web application by integrating it into the Flask web framework.
+
+PROJECT DEMO:
+https://user-images.githubusercontent.com/67554595/146230924-ab1e268b-0d90-4b20-88b9-9cc538f87252.mp4
+
