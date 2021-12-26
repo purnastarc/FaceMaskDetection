@@ -27,7 +27,7 @@ BS = 32
 data = []
 labels = []
 
-DIRECTORY = r"C:\Mask Detection\CODE\Face-Mask-Detection-master\dataset" # Need to download from Kaggle
+DIRECTORY = r"C:\Face Mask Detection\dataset" # data set folder should contain "with mask" amd "with out mask" images.
 CATEGORIES = ["with_mask", "without_mask"]
 
 
